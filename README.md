@@ -29,5 +29,11 @@ La aplicación también incluye un formulario de búsqueda para filtrar informac
 
 ![Captura de pantalla 2025-05-20 205356](https://github.com/user-attachments/assets/47d6da59-d1bb-436d-a3bc-db4f510c5bc6)
 
+![image](https://github.com/user-attachments/assets/e332a4e4-8e9c-412e-94a9-cbbaae63de28)
+
+![image](https://github.com/user-attachments/assets/e44961bf-767a-4630-b5e7-e2f309c58d28)
+
+
+
 
 
