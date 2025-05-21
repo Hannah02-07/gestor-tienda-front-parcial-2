@@ -20,4 +20,14 @@ Interfaz de Usuario:
 
 El panel tiene una estructura clara: un título principal con un mensaje de bienvenida y varias secciones donde se visualizarán o gestionarán los datos.
 
-La aplicación también incluye un formulario de búsqueda para filtrar información.
+La aplicación también incluye un formulario de búsqueda para filtrar información.}
+
+![image](https://github.com/user-attachments/assets/8cf49548-c536-48f4-a377-c1da0205847c)
+
+
+![image](https://github.com/user-attachments/assets/41a826bc-4e84-48ff-b801-951c88001c8d)
+
+![Captura de pantalla 2025-05-20 205356](https://github.com/user-attachments/assets/47d6da59-d1bb-436d-a3bc-db4f510c5bc6)
+
+
+
