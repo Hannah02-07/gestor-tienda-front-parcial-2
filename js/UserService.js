@@ -47,7 +47,7 @@ function users(page){
               <td>${element.id}</td>
               <td>${element.name}</td>
               <td>${element.email}</td>
-              <td><img src="${element.avatar}" class="img-thumbnail"alt="avatar del usuario"></td>
+              <td><img src="${element.image}" class="img-thumbnail"alt="avatar del usuario"></td>
               <td> <button type="button" class="btn btn-outline-info" onclick="getUser('${element.id}')">Ver</button> </td>
             
             
@@ -112,7 +112,7 @@ function getUser(idUser){
 })
 .then((response)=>{
     if(response.status===200){
-        const user=response.body.data
+        const user=response.body
         const modalUser=`
         <div class="modal fade" id="modalUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -124,11 +124,11 @@ function getUser(idUser){
                 <div class="modal-body">
                    
                     <div class="card" ">
-                        <img src="${user.avatar}" class="card-img-top" alt="Avatar del usuario">
+                        <img src="${user.image}" class="card-img-top" alt="Avatar del usuario">
                         <div class="card-body">
                             <h5 class="card-title">Informacion del usuario: </h5>
-                            <p class="card-text">Nombre: ${user.first_name} </p>
-                             <p class="card-text">Apellido: ${user.last_name} </p>
+                            <p class="card-text">Nombre: ${user.name} </p>
+                             <p class="card-text">Email: ${user.email} </p>
                            
                         </div>
                     </div>

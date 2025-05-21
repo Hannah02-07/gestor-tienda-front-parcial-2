@@ -39,9 +39,9 @@ function categories(page){
   </thead>
   <tbody>
         `
-         console.log('productos',result.info.data)
+         console.log('categories',result.info.data)
          result.info.forEach(element =>{
-        console.log('products', element)
+        console.log('categories', element)
             listCategories = listCategories + `
             <tr>
               <td>${element.id}</td>
@@ -82,15 +82,15 @@ function categories(page){
         document.getElementById('info').innerHTML=listCategories
 
     }else{
-        document.getElementById('info').innerHTML='no existen productos en la red'
+        document.getElementById('info').innerHTML='no existen categories en la red'
     }
 })
 
     
 
 }
-function getCategories(idProducts){
-    const  PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/categories/'+idProducts
+function getCategories(idCategories){
+    const  PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/categories/'+idCategories
     fetch(PLATZI_ENDPOINT,{
 
         method:'GET',
@@ -111,11 +111,12 @@ function getCategories(idProducts){
         }
     )
 })
+
 .then((response)=>{
     if(response.status===200){
-        const categorie=response.body.data
+        const categorie=response.body
         const modalCategories=`
-        <div class="modal fade" id="modalProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal fade" id="modalCategories" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -125,12 +126,11 @@ function getCategories(idProducts){
                 <div class="modal-body">
                    
                     <div class="card" ">
-                        
+                        <img src="${categorie.image}" class="card-img-top" alt="Imagen de la categoria">
                         <div class="card-body">
-                            <h5 class="card-title">Informacion del producto: </h5>
+                            <h5 class="card-title">Informacion del usuario: </h5>
                             <p class="card-text">Nombre: ${categorie.name} </p>
-                             <p class="card-text">Año: ${categorie.year} </p>
-                              <p class="card-text">Valor: ${categorie.pantone_value} </p>
+                             <p class="card-text">Slug: ${categorie.slug} </p>
                            
                         </div>
                     </div>
@@ -142,6 +142,7 @@ function getCategories(idProducts){
                 </div>
             </div>
         </div>
+        
         
         
         
