@@ -14,8 +14,8 @@ function login(email, password){
     let alertType= ''
     
 
-    const REQRES_ENDPOINT =' https://api.escuelajs.co/api/v1/auth/login'
-    fetch(REQRES_ENDPOINT,{
+    const PLATZI_ENDPOINT =' https://api.escuelajs.co/api/v1/auth/login'
+    fetch(PLATZI_ENDPOINT,{
 
         method:'POST',
         headers: {

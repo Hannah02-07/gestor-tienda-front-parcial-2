@@ -1,7 +1,7 @@
 function products(){
     document.getElementById('cardHeader').innerHTML='<h5>Listado de productos</h5>'
-    const REQRES_ENDPOINT ='https://api.escuelajs.co/api/v1/products'
-    fetch(REQRES_ENDPOINT,{
+    const PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/products'
+    fetch(PLATZI_ENDPOINT,{
 
         method:'GET',
         headers: {

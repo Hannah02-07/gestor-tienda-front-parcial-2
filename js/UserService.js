@@ -1,7 +1,7 @@
 function users(page){
     document.getElementById('cardHeader').innerHTML='<h5>Listado de usuarios</h5>'
-    const REQRES_ENDPOINT ='https://api.escuelajs.co/api/v1/users'+page
-    fetch(REQRES_ENDPOINT,{
+    const PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/users?page='+page
+    fetch(PLATZI_ENDPOINT,{
 
         method:'GET',
         headers: {
@@ -40,7 +40,7 @@ function users(page){
   </thead>
   <tbody>
         `;
-
+           console.log
         result.info.data.forEach(element =>{
             listUsers = listUsers + `
             <tr>
@@ -89,7 +89,7 @@ function users(page){
 
 }
 function getUser(idUser){
-    const REQRES_ENDPOINT ='https://api.escuelajs.co/api/v1/users'+idUser
+    const REQRES_ENDPOINT ='https://api.escuelajs.co/api/v1/users/'+idUser
     fetch(REQRES_ENDPOINT,{
 
         method:'GET',
