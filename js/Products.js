@@ -33,7 +33,7 @@ function products(page){
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
-      <th scope="col">año</th>
+      <th scope="col">Slug</th>
       <th scope="col">valor</th>
     </tr>
   </thead>
