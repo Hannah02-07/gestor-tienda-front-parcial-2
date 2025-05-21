@@ -33,7 +33,7 @@ function login(email, password){
             alertBuilder(alertType,message)
             localStorage.setItem('token','jaiuhn9283kiij92jm')
             setTimeout(()=>{
-                location.href='admin/dashboard.html'
+                location.href='admin/dashBoard.html'
 
             },2000)//2000ms=2s
 
