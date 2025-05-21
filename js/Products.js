@@ -1,6 +1,6 @@
-function products(){
+function products(page){
     document.getElementById('cardHeader').innerHTML='<h5>Listado de productos</h5>'
-    const PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/products'
+    const PLATZI_ENDPOINT ='https://api.escuelajs.co/api/v1/products?page='+page
     fetch(PLATZI_ENDPOINT,{
 
         method:'GET',
