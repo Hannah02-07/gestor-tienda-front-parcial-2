@@ -40,8 +40,8 @@ function users(page){
   </thead>
   <tbody>
         `;
-           console.log
-        result.info.data.forEach(element =>{
+           
+        result.info.forEach(element =>{
             listUsers = listUsers + `
             <tr>
               <td>${element.id}</td>
