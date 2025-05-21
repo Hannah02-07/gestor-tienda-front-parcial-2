@@ -33,7 +33,7 @@ function users(page){
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
+      <th scope="col">Email</th>
       <th scope="col">Avatar</th>
        <th scope="col">Accion</th>
     </tr>
@@ -45,8 +45,8 @@ function users(page){
             listUsers = listUsers + `
             <tr>
               <td>${element.id}</td>
-              <td>${element.first_name}</td>
-              <td>${element.last_name}</td>
+              <td>${element.name}</td>
+              <td>${element.email}</td>
               <td><img src="${element.avatar}" class="img-thumbnail"alt="avatar del usuario"></td>
               <td> <button type="button" class="btn btn-outline-info" onclick="getUser('${element.id}')">Ver</button> </td>
             
