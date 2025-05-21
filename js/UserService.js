@@ -28,14 +28,14 @@ function users(page){
     console.log('resultado',result)
     if(result.status===200){
         let listUsers=`
-        <table class="table">
+        <table class="table justify-content-center">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
       <th scope="col">Avatar</th>
-       <th scope="col">Accion</th>
+       
     </tr>
   </thead>
   <tbody>

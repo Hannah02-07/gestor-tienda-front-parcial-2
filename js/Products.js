@@ -40,14 +40,14 @@ function products(page){
   <tbody>
         `
          console.log('productos',result.info.data)
-         result.info.data.forEach(element =>{
+         result.info.forEach(element =>{
         console.log('products', element)
             listProducts = listProducts + `
             <tr>
               <td>${element.id}</td>
-              <td>${element.name}</td>
-              <td>${element.year}</td>
-              <td>${element.pantone_value}</td>
+              <td>${element.title}</td>
+              <td>${element.slug}</td>
+              <td>${element.price}</td>
               <td> <button type="button" class="btn btn-outline-info" onclick="getProducts('${element.id}')">Ver</button> </td>
             
             
@@ -113,7 +113,7 @@ function getProducts(idProducts){
 })
 .then((response)=>{
     if(response.status===200){
-        const product=response.body.data
+        const product=response.body
         const modalProduct=`
         <div class="modal fade" id="modalProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -128,9 +128,9 @@ function getProducts(idProducts){
                         
                         <div class="card-body">
                             <h5 class="card-title">Informacion del producto: </h5>
-                            <p class="card-text">Nombre: ${product.name} </p>
-                             <p class="card-text">Año: ${product.year} </p>
-                              <p class="card-text">Valor: ${product.pantone_value} </p>
+                            <p class="card-text">Nombre: ${product.title} </p>
+                             <p class="card-text">slug: ${product.slug} </p>
+                              <p class="card-text">Valor: ${product.price} </p>
                            
                         </div>
                     </div>
